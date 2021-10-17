@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!--CSS STYLE FILE LINK-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--BOXICON FILE LINK-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!--===== HomePage =====-->
+    <div class="home-page">
+        <!--calculator-start-->
+        <div class="calculator">
+            <input type="text" placeholder="0" id="output-text">
+            <button onclick="cl()" class="border">CE</button>
+            <button onclick="delet()" class="border">DEL</button>
+            <button onclick="display('%')" class="border">%</button>
+            <button onclick="display('/')" class="border">/</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('*')" class="border">*</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('-')" class="border">-</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('+')" class="border">+</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="calulat()" class="equal">=</button>
+        </div>
+        <!--/calculator-end-->
+
+        <!--currency-start-->
+        <div class="currency-conversion">
+            <h1>Currency Conversion</h1>
+            <div class="box">
+                <div class="left-box">
+                    <select name="form-currency" id="from-currency" class="currency">
+                    <option value="ils">ILS &#8362; </option>
+                    <option value="usd">USD &#36;</option>
+                    <option value="eur">EUR &euro;</option>
+                    </select>
+                    <input type="text" name="" id="inputNum" placeholder="Enter Currency">
+                </div>
+                <div class="left-box">
+                    <select name="currency" id="to-currency" class="to-currency">
+                        <option value="usd">USD &#36;</option>
+                        <option value="ils">ILS &#8362;</option>
+                        <option value="eur">EUR &euro;</option>
+                    </select>
+                    <input type="text" name="" id="result" placeholder="Result">
+                </div>
+            </div>
+        </div>
+        <!--/currency-end-->
+    </div>
+    <!--===== /.HomePage-End =====-->
+
+    <!--JAVASCRIPT FILE LINK-->
+    <script src="js/main.js"></script>
+</body>
+</html>

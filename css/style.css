@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/*home-page*/
+.home-page{
+    width: 100vw;
+    display: flex;
+    min-height:100vh;
+    align-items: center;
+    background-size: cover;
+    justify-content: space-evenly;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-image: url("../img/home-page.jpg");
+}
+
+/*calculator*/
+.calculator{
+    height: 80vh;
+    display: grid;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    grid-template-columns: repeat(4,70px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 9px;
+}
+.calculator input{
+    height: 70px;
+    border: none;
+    padding: 10px;
+    color: gray;
+    outline: none;
+    font-size: 24px;
+    grid-column: span 4;
+    box-shadow: inset -5px -5px 12px #fff,
+    inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+}
+.calculator button{
+    width: 65px;
+    height: 65px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #ecf0f3;
+    box-shadow:-5px -5px 12px #fff,
+    5px 5px 12px rgba(0, 0, 0, 0.16);
+}
+.calculator button:hover{
+    box-shadow:-5px -5px 12px #fff,
+    5px 5px 12px rgba(209, 17, 17, 0.26);
+}
+.calculator .equal{
+    border-radius: 5%;
+    width: 125px;
+    margin-right: 10px;
+}
+.border{
+    border-radius: 5% !important;
+}
+
+/*currency-conversion*/
+.currency-conversion{
+    height: 40vh;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 9px;
+}
+.currency-conversion h1{
+    color: gray;
+    text-align: center;
+}
+.currency-conversion .box{
+    width: 100%;
+    display: flex;
+}
+.currency-conversion .box select ,
+.currency-conversion .box input{
+    width: 95%;
+    height: 60px;
+    border: none;
+    padding: 10px;
+    outline: none;
+    color: gray;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #ecf0f3;
+    box-shadow:-5px -5px 12px #fff,
+    5px 5px 12px rgba(0, 0, 0, 0.16);
+}
+.currency-conversion .box select:hover ,
+.currency-conversion .box input:hover{
+    box-shadow:-5px -5px 12px #fff,
+    5px 5px 12px rgba(4, 232, 248, 0.26);
+}
+
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (max-width:767px){
+    .home-page{
+        flex-direction: column;
+    }
+    .calculator{
+        margin-top: 30px;
+        overflow-x: hidden;
+    }
+    .currency-conversion{
+        margin: 20px;
+        overflow-x: hidden;
+        height: max-content;
+    }
+}
